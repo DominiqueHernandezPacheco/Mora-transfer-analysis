@@ -1,0 +1,137 @@
+<!doctype html><html lang='es'><head><meta charset='utf-8'><title>Catalogo de datos</title><style>body{font-family:Segoe UI,Arial,sans-serif;max-width:860px;margin:32px auto;padding:0 20px;line-height:1.6;color:#1b1b1b}
+h1,h2,h3{color:#111}h3{margin-top:28px;border-bottom:1px solid #ddd;padding-bottom:4px}
+blockquote{background:#fff7e0;border-left:5px solid #FFB000;margin:10px 0;padding:6px 16px}
+table{border-collapse:collapse;width:100%;margin:12px 0}td,th{border:1px solid #ccc;padding:6px 10px;text-align:left;vertical-align:top}th{background:#f2f2f2}
+code{background:#f2f2f2;padding:1px 4px;border-radius:3px}</style></head><body><h1>Catálogo de datos</h1>
+<table>
+<thead>
+<tr>
+<th>Archivo</th>
+<th>Filas</th>
+<th>Fuente</th>
+<th>¿Por qué lo usamos?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ligamx_2025-26_stats.csv</code></td>
+<td>612</td>
+<td>FBref</td>
+<td>Torneo completo de Liga MX 2025-26 (minutos, goles, penales, asistencias): base para calcular por 90 y quitar penales</td>
+</tr>
+<tr>
+<td><code>ligamx_2025-26_shooting.csv</code></td>
+<td>612</td>
+<td>FBref</td>
+<td>Tiros y tiros a puerta de esa misma temporada; se une con la tabla anterior</td>
+</tr>
+<tr>
+<td><code>fotmob_ligamx_2026-27_apertura_minutos.csv</code></td>
+<td>451</td>
+<td>FotMob</td>
+<td>Minutos y partidos de TODA la liga: sin minutos no se puede normalizar nada por 90</td>
+</tr>
+<tr>
+<td><code>fotmob_ligamx_2026-27_apertura_xg.csv</code></td>
+<td>367</td>
+<td>FotMob</td>
+<td>xG de toda la liga (incluye penales): ver quién crea más peligro de gol</td>
+</tr>
+<tr>
+<td><code>fotmob_ligamx_2026-27_apertura_xg_por90.csv</code></td>
+<td>290</td>
+<td>FotMob</td>
+<td>xG por 90 publicado por FotMob: sirve para VALIDAR mi transcripción del xG total</td>
+</tr>
+<tr>
+<td><code>fotmob_ligamx_2026-27_apertura_xa.csv</code></td>
+<td>448</td>
+<td>FotMob</td>
+<td>xA (asistencias esperadas): mide creación de juego, que las asistencias solas no capturan</td>
+</tr>
+<tr>
+<td><code>fotmob_ligamx_2026-27_apertura_xa_por90.csv</code></td>
+<td>317</td>
+<td>FotMob</td>
+<td>xA por 90: comparar creación entre jugadores con distintos minutos</td>
+</tr>
+<tr>
+<td><code>fotmob_ligamx_2026-27_apertura_tiros_por90.csv</code></td>
+<td>290</td>
+<td>FotMob</td>
+<td>Tiros por 90 y % de conversión: volumen y eficiencia de remate</td>
+</tr>
+<tr>
+<td><code>fotmob_ligamx_2026-27_apertura_oportunidades_creadas.csv</code></td>
+<td>341</td>
+<td>FotMob</td>
+<td>Oportunidades creadas: pases que terminan en tiro, la creación de un mediapunta</td>
+</tr>
+<tr>
+<td><code>fotmob_ligamx_2026-27_apertura_regates_por90.csv</code></td>
+<td>256</td>
+<td>FotMob</td>
+<td>Regates exitosos por 90: el otro rasgo que se le pide a un mediapunta o extremo</td>
+</tr>
+<tr>
+<td><code>*_fbref_standard.csv (9 archivos)</code></td>
+<td>85</td>
+<td>FBref</td>
+<td>Cohorte de 9 jugadores que dieron el salto: minutos, goles y asistencias por temporada, con club y edad</td>
+</tr>
+<tr>
+<td><code>*_fbref_shooting.csv (9 archivos)</code></td>
+<td>83</td>
+<td>FBref</td>
+<td>Cohorte: tiros y tiros a puerta por temporada</td>
+</tr>
+<tr>
+<td><code>players.csv.gz</code></td>
+<td>50,149</td>
+<td>Transfermarkt (dataset abierto)</td>
+<td>Fecha de nacimiento, posición real y valor de mercado: para comparar solo mismo puesto y calcular edades exactas</td>
+</tr>
+<tr>
+<td><code>transfers.csv.gz</code></td>
+<td>175,165</td>
+<td>Transfermarkt (dataset abierto)</td>
+<td>Todos los traspasos con fecha y monto: récords y precedentes del salto</td>
+</tr>
+<tr>
+<td><code>clubs.csv.gz</code></td>
+<td>796</td>
+<td>Transfermarkt (dataset abierto)</td>
+<td>A qué liga pertenece cada club: filtrar ventas desde Liga MX y hacia Europa</td>
+</tr>
+<tr>
+<td><code>competitions.csv.gz</code></td>
+<td>65</td>
+<td>Transfermarkt (dataset abierto)</td>
+<td>Catálogo de ligas que cubre el dataset (para saber qué NO está cubierto)</td>
+</tr>
+<tr>
+<td><code>ligamx_2026-27_apertura_fotmob_merged.csv</code></td>
+<td>451</td>
+<td>Derivado (8 tablas de FotMob)</td>
+<td>Una fila por jugador con todas las métricas: la tabla que se usa para percentiles</td>
+</tr>
+<tr>
+<td><code>cohorte_traspasos.csv</code></td>
+<td>9</td>
+<td>Derivado (Transfermarkt)</td>
+<td>Primer salto de cada jugador de la cohorte: edad exacta, monto y valor en ese momento</td>
+</tr>
+<tr>
+<td><code>manual.csv</code></td>
+<td>27</td>
+<td>FotMob (perfil de Mora)</td>
+<td>Datos propios de Mora (xG, npxG, xA, rankings) con fuente y fecha</td>
+</tr>
+<tr>
+<td><code>cohort_players.csv</code></td>
+<td>13</td>
+<td>Mío (lista de trabajo)</td>
+<td>Lista de jugadores a verificar, con las notas de lo que se corrigió</td>
+</tr>
+</tbody>
+</table></body></html>
