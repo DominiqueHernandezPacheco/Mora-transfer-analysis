@@ -1,0 +1,11 @@
+pandas>=2.2
+numpy>=2.0
+scipy>=1.13
+matplotlib>=3.9
+mplsoccer>=1.4
+pillow>=10.0
+# notebook y exportación a HTML
+jupyter
+nbformat>=5.10
+nbconvert>=7.16
+markdown>=3.6

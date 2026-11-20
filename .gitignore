@@ -1,0 +1,22 @@
+# entorno y caché
+.venv/
+__pycache__/
+.ipynb_checkpoints/
+*.pyc
+
+# datos: copiados de FBref/FotMob (términos de uso de terceros) o descargados (Transfermarkt abierto). No se redistribuyen.
+data/raw/
+data/external/
+data/manual.csv
+data/cohort_players.csv
+data/processed/ligamx_*
+data/processed/similitud_mora.csv
+
+# notas internas y guiones del video
+docs/GUION_*
+
+# exploración descartada (sondeos de fuentes que bloquean bots; similitud con posiciones mezcladas; tarjeta contra toda la liga)
+src/probe_*.py
+src/similitud.py
+src/chart_tarjeta.py
+outputs/02_tarjeta_scouting.png
